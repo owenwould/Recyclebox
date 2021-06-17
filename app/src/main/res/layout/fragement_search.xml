@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageButton
+        android:id="@+id/search_searchbutton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_search_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/search_guideline_right"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="0.2"
+        app:layout_constraintStart_toEndOf="@+id/search_searchbar"
+        app:layout_constraintTop_toTopOf="@+id/search_guideline_horizontal_top" />
+
+    <EditText
+        android:id="@+id/search_searchbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Postcode"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/search_searchbutton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toStartOf="@id/search_guideline_left"
+        app:layout_constraintTop_toTopOf="@id/search_guideline_horizontal_top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_guideline_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/centre_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/search_guideline_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/search_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/barrier5"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/search_default_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="search_searchbutton,search_searchbar"
+        app:layout_constraintEnd_toEndOf="@id/search_guideline_right"
+        app:layout_constraintStart_toStartOf="@id/search_guideline_left"
+        app:layout_constraintTop_toTopOf="@id/search_guideline_horizontal_top" />
+
+    <TextView
+        android:id="@+id/search_textView_Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/search_guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/search_guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/search_guideline_horizontal_top" />
+
+    <TextView
+        android:id="@+id/search_textView_Address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/search_guideline_right"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/search_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/search_textView_Name" />
+
+    <TextView
+        android:id="@+id/search_textView_materialCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/search_guideline_right"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/search_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/search_textView_Address" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/addition_info_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="search_textView_Name,search_textView_Address,search_textView_materialCount,search_goback_button"
+        app:layout_constraintEnd_toEndOf="@id/search_guideline_right"
+        app:layout_constraintStart_toStartOf="@id/search_guideline_left"
+        app:layout_constraintTop_toTopOf="@id/search_guideline_horizontal_top" />
+
+    <Button
+        android:id="@+id/search_goback_button"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_pressed"
+        android:text="Return to search"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/search_guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/search_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/search_textView_materialCount"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="search_textView_Address,search_searchbutton,search_searchbar,search_textView_Name,search_textView_materialCount,search_goback_button"
+        tools:layout_editor_absoluteY="14dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

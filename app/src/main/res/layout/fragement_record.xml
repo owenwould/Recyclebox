@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Record Recycling"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/record_radiogroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        app:layout_constraintStart_toStartOf="@id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline8">
+
+        <RadioButton
+            android:id="@+id/rb_Aerosols"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Aerosols"
+            android:textAlignment="inherit"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_Cardboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Cardboard"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_MetalTins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Metal Tins and Cans"
+
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_Paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Paper"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_PlasticBottles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Plastic Bottles"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_PlasticPackaging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Plastic Trays and Tubs"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_GlassBottles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_radio_button"
+            android:text="Glass Bottles and Jars"
+            android:textAlignment="inherit"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/record_recyclables_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_button"
+        android:text="Record"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Additional information about materials and how to recycle them can be found by pressing the help button which is displayed once a material is selected"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/record_radiogroup" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <ProgressBar
+        android:id="@+id/record_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/record_recyclables_button"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <Button
+        android:id="@+id/record_aerosols_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toTopOf="@id/guideline8" />
+
+    <Button
+        android:id="@+id/record_cardboard_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/record_aerosols_button" />
+
+    <Button
+        android:id="@+id/record_metaltin_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/record_cardboard_button" />
+
+    <Button
+        android:id="@+id/record_paper_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/record_metaltin_button" />
+
+    <Button
+        android:id="@+id/record_plasticbottles_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/record_paper_button" />
+
+    <Button
+        android:id="@+id/record_plasticpackaging_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/record_plasticbottles_button" />
+
+    <Button
+        android:id="@+id/record_glassbottles_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_help_black_24dp"
+        app:layout_constraintStart_toEndOf="@+id/record_radiogroup"
+        app:layout_constraintTop_toBottomOf="@+id/record_plasticpackaging_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

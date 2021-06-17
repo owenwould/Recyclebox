@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/leaderboard_button_solo"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_button_inverse"
+        android:text="Solo"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/leaderboard_guideline_left" />
+
+    <Button
+        android:id="@+id/leaderboard_button_team"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_button_inverse"
+        android:text="Team"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/leaderboard_guideline_right"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leaderboard_guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leaderboard_guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/leaderboard_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/leaderboard_button_team"
+        app:layout_constraintEnd_toStartOf="@+id/leaderboard_guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/leaderboard_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/barrierLeaderboard" />
+
+    <TextView
+        android:id="@+id/textViewLeaderboardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Leaderboard"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/leaderboard_guideline_right"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/leaderboard_guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLeaderboard_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/leaderboard_guideline_right"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/leaderboard_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLeaderboard_motivation_text" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierLeaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textViewLeaderboard_average,textViewLeaderboard_motivation_text"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <TextView
+        android:id="@+id/textViewLeaderboard_motivation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/leaderboard_guideline_right"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/leaderboard_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLeaderboardTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

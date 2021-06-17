@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#71BC78</color>
+    <color name="colorPrimaryDark">#6DAE81</color>
+    <color name="colorAccent">#FF5349</color>
+    <color name="colorBottomNavGreen">#B8F28B</color>
+    <color name="colourGold">#FFDF00</color>
+    <color name="colourSilver">#A8A9AD</color>
+    <color name="colourBronze">#B1560F</color>
+    <color name="colourBlue">#D3F5FF</color>
+
+    <color name="colourCardboard">#158ACE</color>
+    <color name="colourMetal">#536465</color>
+    <color name="colourGlass">#1EB1A5</color>
+    <color name="colourPlastic">#BC4434</color>
+    <color name="colourWhite">#FFFFFF</color>
+
+</resources>

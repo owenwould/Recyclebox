@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Recyclebox</string>
+
+    <array name="area_array">
+        <item>Sunderland</item>
+        <item>Newcastle</item>
+    </array>
+</resources>

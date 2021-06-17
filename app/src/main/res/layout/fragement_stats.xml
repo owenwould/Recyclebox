@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonAchievements"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/custom_button_inverse"
+        android:text="Achievements"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@id/stats_barrier_right"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/buttonStats"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName" />
+
+    <ProgressBar
+        android:id="@+id/statsProgressLeft"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="205.55dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/statsProgressRight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStats" />
+
+    <ProgressBar
+        android:id="@+id/statsProgressRight"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="205.55dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/statsProgressLeft"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAchievements" />
+
+    <Button
+        android:id="@+id/buttonStats"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/custom_button_inverse"
+        android:text="Stats"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAchievements"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@id/stats_barrier_left"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/stats_barrier_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="stats_guideline_Left"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stats_guideline_Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/stats_barrier_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="stats_guideline_right"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/stats_guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stats_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/stats_barrier_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/stats_barrier_left"
+        app:layout_constraintTop_toBottomOf="@+id/statsProgressLeft" />
+
+    <TextView
+        android:id="@+id/textViewPlayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Great Grey Shrike"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/stats_guideline_right"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/stats_guideline_Left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete Achievements to gain points"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAchievements"
+        app:layout_constraintEnd_toStartOf="@+id/stats_guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/stats_guideline_Left"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName"
+        app:layout_constraintVertical_bias="0.20" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
